@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "..", "build")));
 
 
-cron.schedule("0 0 * * *", async function() {
+cron.schedule("0 0 * * * *", async function() {
   console.log("running a task every hour");
 
   try {
